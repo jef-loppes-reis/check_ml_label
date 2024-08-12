@@ -28,7 +28,7 @@ SELECT ml_venda.id as codigo_venda,
 		ELSE null
 	END as loja_vl
 FROM "ECOMM".ml_venda
-INNER JOIN "ECOMM".ml_pedido
+LEFT JOIN "ECOMM".ml_pedido
 ON ml_venda.id = ml_pedido.id
 WHERE ml_venda.id = '%s'
 '''
